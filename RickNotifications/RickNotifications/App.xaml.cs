@@ -12,7 +12,7 @@ namespace RickNotifications
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new SplashPage());
+            MainPage = new NavigationPage(new LoginView());
         }
 
         protected override void OnStart()

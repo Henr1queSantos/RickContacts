@@ -16,7 +16,7 @@ namespace RickContacts
             var sub = new AbsoluteLayout();
             splashImage = new Image
             {
-                Source = "abertura.gif",
+                Source = "candy.mp4",
                 WidthRequest = 100,
                 HeightRequest = 100
             };

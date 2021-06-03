@@ -123,6 +123,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
+      <Version>4.0.9</Version>
+    </PackageReference>
     <PackageReference Include="FirebaseDatabase.net">
       <Version>4.0.6</Version>
     </PackageReference>
@@ -131,9 +134,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\RickNotifications\RickContacts.csproj">
+    <ProjectReference Include="..\RickNotifications\RickNotifications.csproj">
       <Project>{0E76B19E-62EC-41E2-B7BE-F517683A907D}</Project>
-      <Name>RickContacts</Name>
+      <Name>RickNotifications</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
