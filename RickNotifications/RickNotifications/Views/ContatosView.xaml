@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RickNotifications.Views.ContatosView"
+             Title="Contatos" BackgroundColor="black">
+
+    <StackLayout>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <Image Margin="0,0,0,10" HeightRequest="70" Source="ricklogo.png"/>
+                <Label Margin="0,0,0,2" Text="Gerenciamento de Contatos" 
+                       FontAttributes="Bold"
+                       TextColor="DarkCyan"
+                       HorizontalTextAlignment="Center"/>
+
+                <StackLayout BackgroundColor="DarkCyan" x:Name="AddContact">
+                    <Entry x:Name="txtId" Placeholder="Id"/>
+                    <Entry x:Name="txtEmail" Placeholder="Informe o email"/>
+                    <Entry x:Name="txtNome" Placeholder="Informe o nome"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnIncluir" WidthRequest="200" Text="Incluir"
+                            BackgroundColor="Aqua"
+                            Clicked="BtnIncluir_Clicked"/>
+                    <Button x:Name="btnExibir" WidthRequest="200"
+                            Text="Exibir" BackgroundColor="Gainsboro"
+                            Clicked="BtnExibir_Clicked"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnAtualizar" WidthRequest="200"
+                            Text="Atualizar"
+                            BackgroundColor="YellowGreen"
+                            Clicked="BtnAtualizar_Clicked"/>
+                    <Button x:Name="btnDeletar" WidthRequest="200"
+                            Text="Deletar" BackgroundColor="Salmon"
+                            Clicked="BtnDeletar_CLlicked"/>
+                </StackLayout>
+
+
+                <CollectionView x:Name="listaContatos" BackgroundColor="DarkCyan">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout HeightRequest="50" WidthRequest="200" Orientation="Horizontal" Padding="0,5,0,5">
+                                <Label Text="{Binding Nome}" VerticalOptions="Center"/>
+                                <Label Text="{Binding Email}" VerticalOptions="Center"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
