@@ -1,4 +1,5 @@
-﻿using RickNotifications.Views;
+﻿using RickContacts;
+using RickNotifications.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -9,9 +10,10 @@ namespace RickNotifications
     {
         public App()
         {
-            InitializeComponent();
+            //InitializeComponent();
 
             MainPage = new NavigationPage(new LoginView());
+            //MainPage = new LoginView();
         }
 
         protected override void OnStart()

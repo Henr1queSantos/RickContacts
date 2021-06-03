@@ -1,42 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:RickNotifications.ViewModels"
-             x:Class="RickNotifications.Views.LoginView" BackgroundColor="black">
+             x:Class="RickNotifications.Views.LoginView" BackgroundColor="white"
+             x:Name="lblLogin">
 
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Login" TextColor="White" HorizontalTextAlignment="Center" FontSize="25" />
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ContentPage.BindingContext>
         <vm:LoginViewModel />
     </ContentPage.BindingContext>
 
-    <Grid Padding="10" VerticalOptions="Center" BackgroundColor="Black">
+    <Grid Padding="10" VerticalOptions="Center" BackgroundColor="white">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
 
-        <StackLayout Grid.Row="0" VerticalOptions="Center" BackgroundColor="black">
-            <Image Source="ricklogo.png"
+        <StackLayout Grid.Row="0" VerticalOptions="Center" BackgroundColor="white">
+            <Image Source="ricklogonovo.png"
                    WidthRequest="150" HeightRequest="150"
              />
 
-            <Label Text="Login" FontFamily="Verdana"
-                   TextColor="DarkCyan" FontSize="30"
+            <Label Text="Contatos na nuvem" FontFamily="Verdana"
+                   TextColor="DarkGray" FontSize="25"
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
              />
 
         </StackLayout>
 
-        <StackLayout Grid.Row="1" Spacing="5" BackgroundColor="DarkCyan" HeightRequest="200">
-            <Entry Placeholder="Nome Usuário" Text="{Binding Username}" x:Name="User"/>
-            <Entry Placeholder="Senha Usuário" Text="{Binding Password}" IsPassword="True" x:Name="Password"/>
+        <StackLayout Grid.Row="1" Spacing="5" BackgroundColor="#f8f7f7" HeightRequest="200">
+            <Entry Placeholder="Nome Usuário" Text="{Binding Username}" TextColor="black" x:Name="User" PlaceholderColor="black"/>
+            <Entry Placeholder="Senha Usuário" Text="{Binding Password}" IsPassword="True" TextColor="black" x:Name="Password" PlaceholderColor="black"/>
 
-            <Button Text="Login" HorizontalOptions="Center" BackgroundColor="DarkSlateGray"
-                    TextColor="black" WidthRequest="300" HeightRequest="40"
+            <Button Text="Login" HorizontalOptions="Center" BackgroundColor="#C0C0C0"
+                    TextColor="black" FontSize="15" FontAttributes="Bold" WidthRequest="200" HeightRequest="40"
+                    Margin="0,15,0,0"
                     Command="{Binding LoginCommand}"/>
 
-            <Button Text="Registrar" HorizontalOptions="Center" BackgroundColor="DarkSlateGray"
-                    TextColor="black" WidthRequest="300" HeightRequest="40"
+            <Button Text="Registrar" HorizontalOptions="Center" BackgroundColor="#C0C0C0"
+                    TextColor="black" FontSize="15" WidthRequest="200" FontAttributes="Bold" HeightRequest="40"
                     Command="{Binding RegisterCommand}"/>
         </StackLayout>
     </Grid>
