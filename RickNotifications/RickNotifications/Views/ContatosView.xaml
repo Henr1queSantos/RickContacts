@@ -2,21 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RickNotifications.Views.ContatosView"
-             Title="Contatos" BackgroundColor="black">
+             Title="Contatos" BackgroundColor="white">
 
     <StackLayout>
         <StackLayout>
             <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-                <Image Margin="0,0,0,10" HeightRequest="70" Source="ricklogo.png"/>
+                <Image Margin="0,0,0,10" HeightRequest="70" Source="ricklogonovo.png"/>
                 <Label Margin="0,0,0,2" Text="Gerenciamento de Contatos" 
                        FontAttributes="Bold"
                        TextColor="DarkCyan"
                        HorizontalTextAlignment="Center"/>
 
-                <StackLayout BackgroundColor="DarkCyan" x:Name="AddContact">
-                    <Entry x:Name="txtId" Placeholder="Id"/>
-                    <Entry x:Name="txtEmail" Placeholder="Informe o email"/>
-                    <Entry x:Name="txtNome" Placeholder="Informe o nome"/>
+                <StackLayout BackgroundColor="#f8f7f7" x:Name="AddContact">
+                    <Entry x:Name="txtId" Placeholder="Id" PlaceholderColor="#4e4e4e"/>
+                    <Entry x:Name="txtEmail" Placeholder="Informe o email" PlaceholderColor="#4e4e4e"/>
+                    <Entry x:Name="txtNome" Placeholder="Informe o nome" PlaceholderColor="#4e4e4e" />
                 </StackLayout>
                 <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                     <Button x:Name="btnIncluir" WidthRequest="200" Text="Incluir"
@@ -38,12 +38,12 @@
                 </StackLayout>
 
 
-                <CollectionView x:Name="listaContatos" BackgroundColor="DarkCyan">
+                <CollectionView x:Name="listaContatos" BackgroundColor="#f8f7f7">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout HeightRequest="50" WidthRequest="200" Orientation="Horizontal" Padding="0,5,0,5">
-                                <Label Text="{Binding Nome}" VerticalOptions="Center"/>
-                                <Label Text="{Binding Email}" VerticalOptions="Center"/>
+                                <Label Text="{Binding Nome}" VerticalOptions="Center" TextColor="Black"/>
+                                <Label Text="{Binding Email}" VerticalOptions="Center" TextColor=" black"/>
                             </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
